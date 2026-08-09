@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "buy_myz.js",
   "scripts": {
-    "test": "node --test tests/*.test.js",
+    "test": "jest",
     "devto-publish": "node scripts/publish-devto.js --publish",
     "devto-draft": "node scripts/publish-devto.js",
     "start": "node server.js",
@@ -21,5 +21,9 @@
     "express": "^5.2.1",
     "mongoose": "^9.9.1",
     "node-cron": "^4.6.0"
+  },
+  "devDependencies": {
+    "jest": "^30.4.2",
+    "supertest": "^7.2.2"
   }
 }

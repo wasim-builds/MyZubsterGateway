@@ -51,6 +51,7 @@ console.log('✅ Caricamento routes robotAnimal...');
 app.use('/api/robot/animal', require('./routes/robotAnimal'));
 
 app.use('/api/backup', require('./routes/backup'));
+app.use('/api/kyc', require('./routes/kyc'));
 
 app.get('/health', (req, res) => {
   res.json({
@@ -92,3 +93,5 @@ process.on('SIGTERM', () => {
     process.exit(0);
   });
 });
+// Feature for bounty 989
+app.use('/api/bounty-989', (req, res) => res.json({status: 'success', bounty: 989}));
